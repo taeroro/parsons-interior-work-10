@@ -29,7 +29,6 @@ $color-grid-baseline: rgba(56, 255, 255, 0.8);
 
 $color-black:			rgb(0,0,0);
 $color-slate-grey:		rgb(81,77,88);
-$color-dark:			#25202e;
 $color-white:			rgb(250,250,250);
 $color-red:				rgb(255,0,0);
 $color-green:			rgb(0,255,0);
@@ -49,7 +48,9 @@ $color-duck-egg-blue: rgba(228,249,240,1);
 $color-duck-egg-blue-t: rgba(228,249,240,0.96);
 $color-green-blue: rgb(33, 205,134);
 
-$color-sky-blue: #159dff;
+$color-dark:            #25202e;
+$color-grey-reading:    #69685f;
+$color-sky-blue:        #159dff;
 
 // =================================================================================
 // Font Variables
@@ -120,3 +121,11 @@ $readmore-arrow-up-image-src: url('../img/arrow-up-readmore.png');
 // =================================================================================
 $project-image-width : 142px;
 $project-image-height : $project-image-width ;
+
+// =================================================================================
+//Student Work
+// =================================================================================
+$project-card-padding: 25px;
+$top-right-box-width: 44px;
+$top-right-box-border-width: 5px;
+$project-content-margin-top: 60px;
