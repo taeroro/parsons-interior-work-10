@@ -226,25 +226,26 @@ section{
 }
 
 #awards-section {
-	background:{
-		color: $color-pale-grey;
-	}
-	.main-wrapper{
+	border: solid 6px #159dff;
+
+	.main-wrapper {
 		display: flex;
-		flex-flow: column nowrap;
-		& > .label{
+		flex-flow: row nowrap;
+
+		& > .label {
 			align-self: flex-start;
-			margin-top: 100px;
+			margin-top: 80px;
 			position: relative;
-			margin-left: 9%;
-			&> p{
+			margin-left: 12.5%;
+
+			& > p {
 				position: relative;
-				font-family: $contax-sans-regular-stack ;
-				font-size: $font-size * 5.5;
+				font-family: $youngserif-stack;
+				font-size: $font-size * 3.75;
 				color: $color-dark;
-				line-height: 1;
-				text-transform: uppercase;
-				letter-spacing: -0.9px;
+				line-height: 1.1;
+				text-transform: capitalize;
+				letter-spacing: -0.05px;
 				text-decoration: none;
 				z-index: 530;
 				word-break: break-word;
@@ -252,67 +253,57 @@ section{
 			}
 		}
 
-
-
-		& > .awards-panel{
-			margin-top: -50px;
+		& > .awards-panel {
 			align-self: flex-end;
 			z-index: 520;
-			max-width: 670px;
-			margin-right: 9%;
+			margin-left: 15%;
+			margin-top: 80px;
+			margin-bottom: 80px;
 			height: auto;
-			background:{
-				color: $color-turquoise-green;
-			}
-			& .award-winners{
-				padding: 55px 6% 55px 5%;
-				p{
 
-					font-family: $work-sans-stack;
-					font-weight: $thin;
-			      font-size: $font-size * 1.25;
-			      color: $color-dark;
-			      line-height: 1.7;
-			      letter-spacing: -0.2px;
-			      text-decoration: none;
-					span{
-						font-family: $work-sans-stack;
-						font-weight: $regular;
-				        font-size: $font-size * 1.25;
-				        color: $color-dark;
-				        line-height: 1.7;
-				        letter-spacing: -0.2px;
-				        text-decoration: none;
-					}
+			& .award-winners {
+				.award-single-wrapper {
+					margin-bottom: 40px;
+					display: flex;
+					flex-direction: row;
 				}
+				img {
+					width: 34px;
+				  height: 57px;
+				  object-fit: contain;
+					margin-right: 22px;
+				}
+				span {
+					font-family: $youngserif-stack;
+					font-weight: $regular;
+					font-size: $font-size * 1.75;
+					color: $color-sky-blue;
+					line-height: 0.86;
+					letter-spacing: -0.28px;
+					text-decoration: none;
+				}
+				p {
+					font-family: $inconsolata-stack;
+					font-weight: $regular;
+		      font-size: $font-size * 1.625;
+		      color: $color-dark;
+		      line-height: 0.92;
+		      letter-spacing: -0.26px;
+		      text-decoration: none;
+					margin-top: 10px;
+				}
+
 				& > .readmore{
-				    color: $color-white;
-				    letter-spacing: 0.3px;
 				    height: 100%;
 				    margin-top: 12px;
-				    & a:visited {color: $color-white;}
-				    & a.arrow-right{
-						position: relative;
-						width:20px;
-						height: 20px;
-						line-height: 1.15;
-						margin:{
-							left: 10px;
-							top:3px;
+						a {
+							font-family: $inconsolata-stack;
+							font-weight: $bold;
+							font-size: $font-size * 1.25;
+							color: $color-sky-blue;
+					    letter-spacing: 0.29px;
 						}
-						text-decoration: none;
-						cursor: pointer;
-						transition: all 200ms;
-						background:{
-							image: $readmore-arrow-right-image-src;
-							repeat: no-repeat;
-							position: left center;
-							size:contain;
-						}
-						&:hover{
-						transform: scale(1.2,1.2);
-						}
-				    }
+				    & a:visited { color: $color-sky-blue; }
 				}
 			}
 		}
