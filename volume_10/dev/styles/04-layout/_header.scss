@@ -3,7 +3,7 @@ header{
       repeat: no-repeat;
       size: cover;
       position: center center;
-      color: $color-light-grey;
+      color: $color-white;
       origin: border-box;
       clip: border-box;
       attachment: scroll;
@@ -26,7 +26,8 @@ header{
       position: absolute;
       z-index: 500;
       object-fit: cover;
-      object-position: 50% 50%;
+      // object-position: 50% 50%;
+      object-position: bottom;
       width:100%;
       height:100%;
     }
