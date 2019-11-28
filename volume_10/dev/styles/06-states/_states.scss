@@ -809,15 +809,36 @@ header{
 
 }
 #project-header .main-wrapper{
-   & > p:nth-of-type(1){
-      @media all and ( max-width : 1024px ){
-         margin-left: 8%;
-      }
-      @media all and ( max-width : 460px ){
-         margin-left: 6%;
-         margin-right: 6%;
-      }
-   }
+  @media all and (max-width : 1200px) {
+    justify-content: flex-start;
+    transform: translateX(350px);
+
+    .project-card {
+      max-width: 335px;
+    }
+
+    .project-name > p {
+      font-size: 20px !important;
+    }
+
+    .student-name {
+      font-size: 48px !important;
+      line-height: 1.08 !important;
+      letter-spacing: -0.37px !important;
+    }
+
+    .top-right-box {
+      transform-origin: top right;
+      transform: translateY(-25px) translateX(-5px) scale(0.79) !important;
+    }
+
+    .project-main-image {
+      width: calc(100% - 350px);
+      height: 500px;
+      object-position: right;
+    }
+  }
+
 }
 #project-information .main-wrapper{
    & .row-1{
@@ -951,7 +972,8 @@ header{
       }
    }
 }
-#project-content-s .main-wrapper .grid-container .row-2{
+
+#project-content-s .main-wrapper .grid-container .row-2 {
    @media all and ( max-width : 1130px ){
       flex-flow: column nowrap;
    }
@@ -959,6 +981,7 @@ header{
       @media all and ( max-width : 1130px ){
          order: 4;
          display: none;
+
       }
    }
    & > div:nth-of-type(2){
@@ -1016,7 +1039,7 @@ header{
    & > div:nth-of-type(6){
       @media all and ( max-width : 1130px ){
          order: 6;
-         margin: 60px auto 0px auto;
+         margin: 60px auto 0px;
          max-width: 95%;
          display: inline;
          column-count: 2;
