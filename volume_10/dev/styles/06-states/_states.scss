@@ -808,7 +808,7 @@ header{
 
 
 }
-#project-header .main-wrapper{
+#project-header .main-wrapper {
   @media all and (max-width : 1200px) {
     justify-content: flex-start;
     transform: translateX(350px);
@@ -839,7 +839,68 @@ header{
     }
   }
 
+  @media all and (max-width : 767px) {
+    transform: translateX(0px) !important;
+
+    .project-card-wrapper {
+  		top: 100%;
+  		transform: translateY(-15%) translateX(12%) ;
+    }
+
+    .project-card {
+      max-width: 285px !important;
+      padding: 20px !important;
+    }
+
+    .project-name {
+      text-align: right;
+      transform: translateX(-100%) rotate(-90deg) translateY(-120%) translateX(-45px) !important;
+    }
+
+    .project-name > p {
+      font-size: 16px !important;
+      letter-spacing: 0.92px !important;
+    }
+
+    .student-name {
+      font-size: 36px !important;
+      line-height: 1.19 !important;
+      letter-spacing: -0.28px !important;
+    }
+
+    .student-contact p {
+      font-size: 16px !important;
+      line-height: 1.38 !important;
+    }
+
+    .top-right-box {
+      transform-origin: top right;
+      transform: translateY(-25px) translateX(-5px) scale(0.78) translateY(5px) !important;
+    }
+
+    .project-main-image {
+      width: 100vw;
+      height: 400px;
+      object-position: right;
+    }
+
+    .faculty-wrapper {
+      margin-top: 5px !important;
+    }
+
+    .faculty-wrapper p {
+      font-size: 16px !important;
+      line-height: 1.38 !important;
+    }
+  }
 }
+
+#project-content-s {
+  @media all and (max-width : 767px) {
+    margin-top: calc(313px * 0.88 + 30px) !important;
+  }
+}
+
 #project-information .main-wrapper{
    & .row-1{
        @media all and ( max-width : 830px ){
