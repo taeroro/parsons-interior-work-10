@@ -362,30 +362,34 @@ function toggleMenu(){
     }
 }
 function closeSubMenu(){
+    var menuContent = menuPanel.getElementsByClassName('menu-content')[0];
     var menuGrid = document.querySelector('.menu-grid');
     var subMenuGrid = document.querySelector('.sub-menu-grid');
     menuGrid.style.display = 'flex';
     subMenuGrid.classList.add('close');
+
     setTimeout(function(){
         menuGrid.classList.remove('close');
     },30);
 
+    menuContent.classList.remove('submenu-open');
 }
 function openSubMenu(){
+    var menuContent = document.getElementsByClassName('menu-content')[0];
     var menuGrid = document.querySelector('.menu-grid');
     var subMenuGrid = document.querySelector('.sub-menu-grid');
     var backButton = subMenuGrid.querySelector('.back-nav');
 
-    console.log('clicked');
+    menuContent.classList.add('submenu-open');
+
     menuGrid.classList.add('close');
     setTimeout(function(){
         subMenuGrid.classList.remove('close');
         menuGrid.style.display = 'none';
     },200);
-    backButton.removeEventListener('click',closeSubMenu,false);
-    backButton.addEventListener('click',closeSubMenu,false);
 
-
+    backButton.removeEventListener('click', closeSubMenu, false);
+    backButton.addEventListener('click', closeSubMenu, false);
 }
 /** END
  * MENU SECTION
