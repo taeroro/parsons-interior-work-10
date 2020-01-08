@@ -223,7 +223,7 @@ window.onload = function () {
 
 
     menuButton.addEventListener('click', toggleMenu, false);
-    var subMenuButton = document.querySelector('.menu-grid .menu-item .arrow-in');
+    var subMenuButton = document.querySelector('.menu-grid .menu-item .design-work-button');
     subMenuButton.removeEventListener('click',openSubMenu, false);
     subMenuButton.addEventListener('click',openSubMenu, false);
 
@@ -328,18 +328,18 @@ function toggleMenu(){
     var menuText = document.getElementById('menu-controls-text');
     var menuLRButtons = menuControls.getElementsByClassName('menu-button');
 
-    // var elementsToMove = document.querySelectorAll('section,  header');
-
     var body = document.body;
     var currentY = window.pageYOffset;
 
 
     if (menuPanel.classList.contains('open')){
-        menuPanel.style.top = 0 + 'px';
         menuText.innerHTML = 'Menu';
         menuLRButtons[0].classList.remove('open');
         menuLRButtons[1].classList.remove('open');
         body.classList.remove('open');
+        setTimeout(function() {
+          menuPanel.style.top = 0;
+        }, 400);
         menuPanel.classList.remove('open');
         menuContent.classList.remove('open');
         menuControls.classList.remove('open');
@@ -348,7 +348,7 @@ function toggleMenu(){
         menuGrid.style.display = 'flex';
     }
     else {
-      menuPanel.style.top = currentY + 'px';
+        menuPanel.style.top = currentY + 'px';
         menuText.innerHTML = 'Close';
         menuLRButtons[0].classList.add('open');
         menuLRButtons[1].classList.add('open');

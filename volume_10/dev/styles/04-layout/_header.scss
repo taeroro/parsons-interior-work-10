@@ -318,7 +318,7 @@ nav {
   font-weight: $regular;
   color: #FFF;
   text-transform: capitalize;
-  transition: all 0.5s ease-in 10ms;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 
   &.open {
     transform: translateX(-$menu-panel-left - (176px - 45px));
@@ -339,11 +339,43 @@ nav {
     height: 40px;
     background-color: $color-sky-blue;
     cursor: pointer;
-    transition: all 0.5s ease-in 10ms;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 
     &.open {
       opacity: 0;
     }
+  }
+
+  & .menu-button.left {
+    background:{
+      image: $bottom-nav-arrow-image-src;
+      repeat: no-repeat;
+      position: center center;
+      size: contain;
+    }
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+    &.open {
+      opacity: 0;
+    }
+  }
+
+  & .menu-button.right {
+    background:{
+      image: $bottom-nav-arrow-image-src;
+      repeat: no-repeat;
+      position: center center;
+      size: contain;
+    }
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
   }
 
 
@@ -422,7 +454,7 @@ nav {
     &.empty{
       height: 0;
     }
-    & a:first-child{
+    & a {
       font-family: $youngserif-stack;
       font-weight: $regular;
       font-size: $font-size * 2;
@@ -434,21 +466,21 @@ nav {
         color: $color-sky-blue;
       }
     }
-    & a.arrow-in{
-        position: relative;
-        padding: 1px 1px 1px 1px;
-        float:left;
-        width:22px;
-        height: 50px;
-        line-height: 1.15;
-        margin-left: 12px;
-        text-decoration: none;
+    & .design-work-button {
+        position: absolute;
+        left: 0;
+        width: 40px;
+        height: 40px;
         cursor: pointer;
+        background-color: $color-sky-blue;
+
+        transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+
         background:{
-          image: $sub-menu-arrow-image-src;
+          image: $sub-menu-image-src;
           repeat: no-repeat;
-          position: center center;
-          size:contain;
+          position: 50% 50%;
+          size: contain;
         }
         &:hover{
           transform: scale(1.2,1.2);
@@ -456,6 +488,7 @@ nav {
     }
   }
 }
+
 .sub-menu-grid{
   max-width: $wrapper-full-width;
   margin: 0 auto;
