@@ -218,15 +218,14 @@ window.onload = function () {
     var facultyNavigation = document.querySelector('#sticky-navigation');
     var stickyNavigation,navOffsetTop,menuHeight;
 
-    var menuButton = document.querySelector('.menu-panel .menu-controls');
+    var menuButton = document.querySelector('.menu-panel .menu-text-button');
     var header = document.querySelector('header');
 
 
-    menuButton.addEventListener('click', function(event){
-        toggleMenu(event);}, false);
+    menuButton.addEventListener('click', toggleMenu, false);
     var subMenuButton = document.querySelector('.menu-grid .menu-item .arrow-in');
-    subMenuButton.removeEventListener('click',openSubMenu,false);
-    subMenuButton.addEventListener('click',openSubMenu,false);
+    subMenuButton.removeEventListener('click',openSubMenu, false);
+    subMenuButton.addEventListener('click',openSubMenu, false);
 
     if( facultyNavigation ){
         stickyNavigation = document.querySelector('#sticky-navigation .navigation');
@@ -326,10 +325,20 @@ function toggleMenu(){
     var menuControls = menuPanel.getElementsByClassName('menu-controls')[0];
     var menuGrid = document.querySelector('.menu-grid');
     var subMenuGrid = document.querySelector('.sub-menu-grid');
+    var menuText = document.getElementById('menu-controls-text');
+    var menuLRButtons = menuControls.getElementsByClassName('menu-button');
+
+    // var elementsToMove = document.querySelectorAll('section,  header');
 
     var body = document.body;
+    var currentY = window.pageYOffset;
 
-    if( menuPanel.classList.contains('open') ){
+
+    if (menuPanel.classList.contains('open')){
+        menuPanel.style.top = 0 + 'px';
+        menuText.innerHTML = 'Menu';
+        menuLRButtons[0].classList.remove('open');
+        menuLRButtons[1].classList.remove('open');
         body.classList.remove('open');
         menuPanel.classList.remove('open');
         menuContent.classList.remove('open');
@@ -337,7 +346,12 @@ function toggleMenu(){
         menuGrid.classList.remove('close');
         subMenuGrid.classList.add('close');
         menuGrid.style.display = 'flex';
-    }else{
+    }
+    else {
+      menuPanel.style.top = currentY + 'px';
+        menuText.innerHTML = 'Close';
+        menuLRButtons[0].classList.add('open');
+        menuLRButtons[1].classList.add('open');
         body.classList.add('open');
         menuPanel.classList.add('open');
         menuContent.classList.add('open');
