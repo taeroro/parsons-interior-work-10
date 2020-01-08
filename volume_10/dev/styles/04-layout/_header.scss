@@ -316,7 +316,7 @@ nav {
 
   font-family: $youngserif-stack;
   font-weight: $regular;
-  color: #FFF;
+  color: $color-white;
   text-transform: capitalize;
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 
@@ -331,6 +331,11 @@ nav {
     background-color: $color-sky-blue;
     margin: 0 5px;
     cursor: pointer;
+
+    &.submenu-open {
+      background-color: $color-white;
+      color: $color-sky-blue;
+    }
   }
 
   & .menu-button {
@@ -498,7 +503,7 @@ nav {
   // margin: 0 auto;
   // transition: opacity 800ms 0ms,display 0ms 0ms;
 
-  padding: 0 65px;
+  padding: 0 45px;
   display: flex;
   opacity: 1;
   flex-flow: column;
@@ -519,6 +524,23 @@ nav {
       font-size: 36px;
       color: #FFF;
     }
+  }
+
+  & .back-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: $color-white;
+    background: {
+      image: $sub-menu-arrow-back-image-src;
+      repeat: no-repeat;
+      position: center center;
+      size: contain;
+    }
+
   }
 
 }

@@ -327,6 +327,7 @@ function toggleMenu(){
     var subMenuGrid = document.querySelector('.sub-menu-grid');
     var menuText = document.getElementById('menu-controls-text');
     var menuLRButtons = menuControls.getElementsByClassName('menu-button');
+    var menuMiddleButton = document.getElementsByClassName('menu-text-button')[0];
 
     var body = document.body;
     var currentY = window.pageYOffset;
@@ -336,9 +337,11 @@ function toggleMenu(){
         menuText.innerHTML = 'Menu';
         menuLRButtons[0].classList.remove('open');
         menuLRButtons[1].classList.remove('open');
+        menuContent.classList.remove('submenu-open');
+        menuMiddleButton.classList.remove('submenu-open');
         body.classList.remove('open');
         setTimeout(function() {
-          menuPanel.style.top = 0;
+            menuPanel.style.top = 0;
         }, 400);
         menuPanel.classList.remove('open');
         menuContent.classList.remove('open');
@@ -361,32 +364,38 @@ function toggleMenu(){
         menuGrid.style.display = 'flex';
     }
 }
-function closeSubMenu(){
-    var menuContent = menuPanel.getElementsByClassName('menu-content')[0];
-    var menuGrid = document.querySelector('.menu-grid');
-    var subMenuGrid = document.querySelector('.sub-menu-grid');
-    menuGrid.style.display = 'flex';
-    subMenuGrid.classList.add('close');
-
-    setTimeout(function(){
-        menuGrid.classList.remove('close');
-    },30);
-
-    menuContent.classList.remove('submenu-open');
-}
-function openSubMenu(){
+function closeSubMenu() {
     var menuContent = document.getElementsByClassName('menu-content')[0];
     var menuGrid = document.querySelector('.menu-grid');
     var subMenuGrid = document.querySelector('.sub-menu-grid');
+    var menuMiddleButton = document.getElementsByClassName('menu-text-button')[0];
+    menuGrid.style.display = 'flex';
+    subMenuGrid.classList.add('close');
+
+    setTimeout(function() {
+        menuGrid.classList.remove('close');
+    }, 30);
+
+    menuContent.classList.remove('submenu-open');
+    menuMiddleButton.classList.remove('submenu-open');
+}
+
+function openSubMenu() {
+    var menuContent = document.getElementsByClassName('menu-content')[0];
+    var menuGrid = document.querySelector('.menu-grid');
+    var subMenuGrid = document.querySelector('.sub-menu-grid');
+    var menuMiddleButton = document.getElementsByClassName('menu-text-button')[0];
+
     var backButton = subMenuGrid.querySelector('.back-nav');
 
     menuContent.classList.add('submenu-open');
+    menuMiddleButton.classList.add('submenu-open');
 
     menuGrid.classList.add('close');
-    setTimeout(function(){
+    setTimeout(function() {
         subMenuGrid.classList.remove('close');
         menuGrid.style.display = 'none';
-    },200);
+    }, 200);
 
     backButton.removeEventListener('click', closeSubMenu, false);
     backButton.addEventListener('click', closeSubMenu, false);
