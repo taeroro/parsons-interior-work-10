@@ -24,11 +24,11 @@ i{
    font-style: italic;
 }
 p{
-   font-size: 1*$font-size;
+   font-size: 18px;
    line-height: 1.6;
-   font-family: $work-sans-stack;
+   font-family: $inconsolata-stack;
    font-weight: $regular;
-   color: $color-brownish-grey;
+   color: $color-grey-reading;
    &.cap-letter{
       &::first-letter{
          font-size: 4.3*$font-size;

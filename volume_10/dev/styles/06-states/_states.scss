@@ -15,71 +15,85 @@ nav .sticky-background{
       }
    }
 }
-.menu-grid{
-   @media all and ( max-width: 920px ){
-      flex-flow: column nowrap;
-   }
-   @media all and ( max-width: 736px ){
-      margin-top: 10px;
-   }
-   & .menu-item, & .menu-item:nth-child(2n){
-      @media screen and ( max-width: 920px ){
-         margin-left: 20px;
-         flex: auto;
-         margin-bottom: 30px;
+
+body, html {
+  @media all and ( max-width: 768px ){
+    &.open {
+  		transform: translateX(100vw);
+  	}
+  }
+}
+
+@media all and ( max-width: 576px ){
+  .menu-controls {
+    transform: translateX(-50px);
+  }
+}
+
+.menu-content {
+   @media all and ( max-width: 768px ){
+      width: 100vw;
+      &.open {
+        transform: translateX(-100vw);
       }
-      &.empty{
-         @media screen and ( max-width: 920px ){
-            display: none;
-         }
+   }
+
+   & .menu-grid {
+      @media all and ( max-width: 768px ){
+        & .menu-item {
+          margin-bottom: 50px;
+        }
       }
-      & a:first-child{
-         @media screen and ( max-width: 920px ){
-            align-self: center;
-         }
-         @media screen and ( max-width: 520px ){
-            font-size: $font-size * 2.4;
-         }
+
+      @media all and ( max-width: 576px ){
+        & .menu-item {
+          & a {
+            font-size: $font-size * 1.5;
+          }
+          & .design-work-button {
+            transform: translateY(-8px);
+          }
+        }
       }
    }
 }
-.sub-menu-grid{
-   @media all and ( max-width: 980px ){
-   }
-   @media screen and ( max-width: 736px ){
-         height: auto;
 
-   }
-   & .sub-items{
-      @media screen and ( max-width: 768px ){
-         max-height: none;
+.sub-menu-grid {
+  @media all and ( max-width: 576px ){
+    & .sub-menu-title {
+      margin-bottom: 20px;
+      & span {
+        font-family: $youngserif-stack;
+        font-weight: $regular;
+        font-size: 24px;
+        color: #FFF;
       }
-      @media screen and ( max-width: 736px ){
-         flex-wrap: nowrap;
+    }
+  }
+
+  & .sub-item-container {
+    @media all and ( max-width: 576px ){
+      margin-bottom: 25px;
+      & .sub-item {
+        & img {
+          width: 40px;
+          height: 40px;
+        }
       }
 
-   }
-   & .root-nav{
-      @media screen and ( max-width: 736px ){
-         margin-top: 18px;
+      & .sub-item-content {
+        margin-left: 10px !important;
+        & p {
+          font-size: 18px !important;
+        }
+        & span {
+          font-size: 16px !important;
+        }
       }
-      & .back-nav{
-         & div{
-            @media screen and ( max-width: 736px ){
-               display: none;
-            }
-         }
-      }
-      & .title{
-         @media screen and ( max-width: 736px ){
-            font-size: $font-size * 2.75;
-         }
-         @media screen and ( max-width: 360px ){
-            font-size: $font-size * 2.4;
-         }
-      }
-   }
+    }
+  }
 }
+
 #page-header h1{
    @media all and ( max-width: 520px ){
       font-size: 3 * $font-size;

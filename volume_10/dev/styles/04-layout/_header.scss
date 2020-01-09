@@ -299,9 +299,6 @@ nav {
   justify-content: center;
 
   //height: 100%; when menu comes in
-  &.open {
-
-  }
 }
 
 .menu-controls {
@@ -320,7 +317,7 @@ nav {
   font-weight: $regular;
   color: $color-white;
   text-transform: capitalize;
-  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 
   &.open {
     transform: translateX(-$menu-panel-left - (176px - 45px));
@@ -346,7 +343,7 @@ nav {
     height: 40px;
     background-color: $color-sky-blue;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 
     &.open {
       opacity: 0;
@@ -384,27 +381,6 @@ nav {
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
   }
-
-
-  &.white {
-    color: $color-white;
-    transition: none;
-  }
-  &.black {
-    color: $color-dark;
-    transition: none;
-    &:before {
-      background-color: $color-dark;
-    }
-    &:after {
-      background-color: $color-dark;
-    }
-  }
-
-  &.white:before,&.white:after {
-    background-color: $color-white;
-  }
-
 }
 
 .menu-content {
@@ -438,7 +414,7 @@ nav {
 }
 
 .menu-grid {
-  padding: 0 65px;
+  padding: 0 65px 65px;
   position: relative;
   top: 0;
   display: flex;
