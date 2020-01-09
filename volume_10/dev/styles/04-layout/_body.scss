@@ -286,6 +286,12 @@ section {
 		height: 61px;
 		object-fit: contain;
 	}
+
+	& .awards-icon {
+		width: 130px;
+		height: 61px;
+		object-fit: contain;
+	}
 }
 
 #page-header.feature{
@@ -2066,97 +2072,122 @@ section {
 		}
 	}
 }
-#awards-recognitions .main-wrapper{
-	& .grid-container{
-		position:relative;
+#awards-recognitions .main-wrapper {
+	& .grid-container {
+		position: relative;
 		display: flex;
 		margin: 0 auto;
+		margin-bottom: 120px;
 		flex-flow: column nowrap;
-		max-width: 920px;
+		max-width: 880px;
 
-		& .award{
-
+		& .award {
 			width: 100%;
-			margin-bottom: 55px;
+			margin-bottom: 50px;
 			position: relative;
-			& .award-image{
-				height: 40vh;
-				overflow: hidden;
-				position: relative;
-				& img{
-					width: 100%;
+
+			& .award-top-component-container {
+				display: flex;
+				flex-direction: row;
+				height: 255px;
+				margin-bottom: 20px;
+
+				& .award-top-box-container.news {
+					border: solid 5px #c9e0f1;
+					background-color: rgba(255, 255, 255, 0.9);
+
+					& .award-top-box-text-container.news {
+						// hyphens: auto;
+					}
+					& .award-top-box-icon-container.news {
+						& img {
+							width: 51px;
+							height: 46px;
+							object-fit: contain;
+						}
+						& span {
+							transform: rotate(-90deg) translate(-15px, 0);
+						}
+					}
+				}
+
+				& .award-top-box-container {
+					display: flex;
+					flex-direction: row;
+					width: 35%;
+					border: solid 5px $color-sky-blue;
+					background-color: #e3eff8;
+					padding: 30px 40px 30px 30px;
+
+					& .award-top-box-text-container {
+						margin-right: 35px;
+
+						& h2 {
+							font-family: $youngserif-stack;
+							font-size: 28px;
+							font-weight: $regular;
+							line-height: 1.25;
+							letter-spacing: -0.16px;
+							color: $color-dark;
+						}
+					}
+
+					& .award-top-box-icon-container {
+						width: 36px;
+
+						& img {
+							width: 36px;
+							height: 58px;
+							object-fit: contain;
+						}
+						span {
+							display: inline-block;
+							font-family: $inconsolata-stack;
+							font-size: 20px;
+							font-weight: $bold;
+							letter-spacing: 2px;
+							color: $color-sky-blue;
+							transform: rotate(-90deg) translate(-15px, -38%);
+						}
+					}
+				}
+
+				& .award-image-container {
 					height: 100%;
-					object-fit: cover;
+					width: 65%;
+
+					img {
+						height: 100%;
+						width: 100%;
+						object-fit: cover;
+					}
 				}
 			}
-			& .award-information{
-				position: relative;
-				display: flex;
-				flex-flow: row nowrap;
 
-				& .award-credits{
-					padding: 30px 30px;
-					flex-basis: 50%;
-					min-width: 300px;
-					& .column{
-						min-height: 275px;
-						height: 100%;
-						display: flex;
-
-						flex-flow: column nowrap;
-						justify-content: flex-start;
-						position: relative;
-						top: -60px;
-						background-color: $color-turquoise-green;
-						padding: 9px 30px 9px 30px;
-						& label{
-							color: $color-white;
-							font-family: $contax-sans-regular-stack;
-							font-size: 1*$font-size;
-							letter-spacing: 1.6px;
-							text-transform: uppercase;
-							margin-top: 21px;
-						}
-						& p{
-							margin-top: 2px;
-							color: $color-slate-grey;
-							font-family: $work-sans-stack;
-							font-weight: $light;
-							font-size: 1.8*$font-size;
-							letter-spacing: -0.2px;
-
-						}
-
-					}
-
-				}
-				& .project-information{
-					flex-basis: 60%;
-					position: relative;
-					color: $color-brownish-grey;
-					font-family: $work-sans-stack;
+			& .award-bottom-component-container {
+				& .recipient-text {
+					font-family: $inconsolata-stack;
+					font-size: 18px;
 					font-weight: $regular;
-					font-size: 1*$font-size;
-					line-height: 1.6;
-					padding-top:30px;
-					& label{
-						letter-spacing: 1px;
-						text-transform: uppercase;
-						color: $color-purpley-grey;
-						font-size: 0.9*$font-size;
-						font-family: $contax-sans-regular-stack;
-
-					}
-					& p:nth-of-type(1){
-						color: $color-slate-grey;
-						margin-top: 5px;
-						font-size: 1.5*$font-size;
-						line-height: 1.1;
-						font-weight: $light;
-						margin-bottom: 25px;
-					}
+					color: $color-sky-blue;
 				}
-
+				& .recipient-name-text {
+					margin-top: 5px;
+					font-family: $youngserif-stack;
+					font-size: 22px;
+					font-weight: $regular;
+					line-height: 1.36;
+					letter-spacing: -0.12px;
+					color: #514d58;
+					margin-bottom: 15px;
+				}
+				& .recipient-content-text {
+					font-family: $inconsolata-stack;
+					font-size: 18px;
+					font-weight: $regular;
+					line-height: 1.44;
+					color: $color-grey-reading;
+				}
 			}
 		}
 	}
