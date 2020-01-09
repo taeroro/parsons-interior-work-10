@@ -246,7 +246,8 @@ window.onload = function () {
             }
             ticking = true;
         });
-    }else{
+    }
+    else {
         var menuButtonWhite = document.querySelector('.menu-panel .menu-controls.white');
         if( menuButtonWhite ){
             window.addEventListener('scroll', function() {
@@ -273,7 +274,7 @@ window.onload = function () {
         }
     }
 
-    function checkStickyNav(scroll_pos){
+    function checkStickyNav(scroll_pos) {
         navOffsetTop = facultyNavigation.offsetTop;
         if( (scroll_pos + menuHeight ) >= navOffsetTop ){
             if( !stickyNavigation.classList.contains('sticked') ){
@@ -294,7 +295,7 @@ window.onload = function () {
             var targetElement = document.getElementsByClassName(this.dataset.target);
             var readMoreText = this.parentNode.querySelector('a:nth-of-type(1)');
             var readMoreArrow = this.parentNode.querySelector('a:nth-of-type(2)');
-            for( var j =0 ; j < targetElement.length ; j++){
+            for( var j =0 ; j < targetElement.length ; j++) {
                 if( targetElement[j].classList.contains('close') ){
                     targetElement[j].classList.remove('close');
                     readMoreText.innerText = 'Read Less';
@@ -311,6 +312,16 @@ window.onload = function () {
 
         },false);
     }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 };
 
 
