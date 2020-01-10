@@ -313,6 +313,9 @@ window.onload = function () {
         },false);
     }
 
+    var facultyMain = document.querySelector('.main-wrapper.faculty-dir');
+    if (facultyMain) facultyMain.style.marginTop = -(facultyNavigation.clientHeight) + 'px';
+
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -358,6 +361,9 @@ function toggleMenu(){
         menuContent.classList.remove('open');
         menuControls.classList.remove('open');
         menuGrid.classList.remove('close');
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+            anchor.style.pointerEvents = 'auto';
+        });
         subMenuGrid.classList.add('close');
         menuGrid.style.display = 'flex';
     }
@@ -371,6 +377,9 @@ function toggleMenu(){
         menuContent.classList.add('open');
         menuControls.classList.add('open');
         menuGrid.classList.remove('close');
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
+            anchor.style.pointerEvents = 'none';
+        });
         subMenuGrid.classList.add('close');
         menuGrid.style.display = 'flex';
     }

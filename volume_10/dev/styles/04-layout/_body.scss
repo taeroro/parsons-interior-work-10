@@ -418,10 +418,13 @@ section {
 }
 
 #sticky-navigation{
-	position: fixed;
+	position: sticky;
+	top: 60px;
 	width: 40px;
 	height: auto;
-	z-index: 320;
+	max-height: calc(100vh - 60px);
+	z-index: 506;
+	margin-left: -(135px - 50px);
 
 	& .navigation{
 		display: flex;
@@ -435,6 +438,7 @@ section {
 		&>ul {
 			display: flex;
 			flex-flow: column;
+			text-align: center;
 			&>li {
 				& a {
 					font-family: $work-sans-stack;
