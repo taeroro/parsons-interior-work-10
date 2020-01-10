@@ -112,59 +112,61 @@ body, html {
       font-size: $font-size * 1.25;
    }
 }
-header{
-   @media all and ( max-width: 480px ){
-      & .left-nav{
-         & .nav-controls{
-            left: 5px;
-         }
-      }
-      & .right-nav{
-         & .nav-controls{
-           right: 5px;
-         }
-      }
-      & .bottom-nav{
-         & .nav-controls{
-            height: 30px;
-            width: 30px;
-         }
-      }
+
+header {
+  @media all and (max-width: 768px) {
+    height: 600px;
+  }
+
+   @media all and (max-width: 500px) {
+     height: 400px;
    }
    & .header-wrapper {
-      @media all and ( max-width: 480px ){
-         & > div:nth-of-type(1){
-            flex: 0 1 62px;
-         }
-         & > div:nth-of-type(3){
-            flex: 0 1 62px;
-         }
-      }
-
-      & > .header-container{
-         @media all and ( max-width: 768px ){
-            & > .school-name{
-               font-size: $font-size * 1;
-               margin-bottom: 15px;
-            }
-            & > .edition-info{
-               font-size: $font-size * 1.6;
-               margin-top: 15px;
+      & > .header-container {
+         @media all and (max-width: 1100px) {
+            & > .school-name {
+               font-size: 24px;
+               letter-spacing: 2.22px;
+               margin-bottom: 25px;
             }
             & > .edition-name {
-               font-size: $font-size * 6.9;
+               font-size: 70px;
+               line-height: 1.2;
+               letter-spacing: -0.15px;
+            }
+            & > .edition-info {
+               font-size: 28px;
+               margin-top: 25px;
+               line-height: 1.14;
+               letter-spacing: -0.53px;
             }
          }
-         @media all and ( max-width: 736px ){
-            & > .school-name{
-               font-size: $font-size * 1;
-            }
-            & > .edition-info{
-               font-size: $font-size * 1.125;
+         @media all and (max-width: 768px) {
+            & > .school-name {
             }
             & > .edition-name {
-               font-size: $font-size * 4.5;
-               line-height: 0.8;
+              line-height: 1.14;
+              white-space: pre-line;
+            }
+            & > .edition-info {
+            }
+         }
+         @media all and (max-width: 500px) {
+            & > .school-name {
+               font-size: 13px;
+               letter-spacing: 1.2px;
+               text-shadow: 0 0 12px rgba(255, 255, 255, 0.83);
+            }
+            & > .edition-name {
+               font-size: 50px;
+               line-height: 1.14;
+               letter-spacing: -0.11px;
+               white-space: pre-line;
+            }
+            & > .edition-info {
+              font-size: 16px;
+              line-height: 1;
+              letter-spacing: -0.3px;
             }
          }
       }
@@ -1151,146 +1153,105 @@ header{
       }
    }
 }
-#dean-letter-section > .main-wrapper {
-   & > .row-1{
-      @media all and ( max-width: 768px ){
-         flex-flow: row wrap;
-         & > div:nth-of-type(1){
-           flex: 0 1 4%;
-         }
-         & > .section-header{
-            flex: 0 2 96%;
-            margin-bottom: 50px;
-         }
-         & > div:nth-of-type(3){
-            flex: 0 1 4%;
-         }
-         & > div:nth-of-type(4){
-            flex: 0 1 43%;
-         }
-         & > div:nth-of-type(5){
-            flex: 0 0 4%;
-         }
-         & > div:nth-of-type(6){
-            flex: 0 1 43%;
-         }
-         & > div:nth-of-type(7){
-            flex: 0 1 4%;
-         }
-      }
-      @media all and ( max-width: 568px ){
-         flex-flow: column nowrap;
-         align-items: flex-start;
-         & > div:nth-of-type(1), & > div:nth-of-type(3), & > div:nth-of-type(5),& > div:nth-of-type(7){
-            display: none;
-         }
-         & > .section-header{
-            margin-left: 5%;
-            flex: auto;
-            max-width: 90%;
-            margin-bottom: 0px;
-         }
-         & > div:nth-of-type(4){
-            margin: 40px  auto 0 auto;
-            max-width: 90%;
-            flex: auto;
-         }
 
-         & > div:nth-of-type(6){
-            max-width: 90%;
-            flex: auto;
-            margin: 40px  auto 0 auto;
-         }
+#letter-section {
+  & .main-letter-wrapper {
+    @media all and (max-width: 600px) {
+      margin-top: 150px;
+    }
+  }
 
+  & .inner-letter-wrapper-1, .inner-letter-wrapper-2 {
+    @media all and (max-width: 1100px) {
+      width: 80%;
+    }
+    @media all and (max-width: 954px) {
+      margin-right: 10%;
+      margin-left: 10%;
+    }
+    @media all and (max-width: 768px) {
+      .letter-from {
+        transform: translateX(-100%) rotate(-90deg) translateY(-150%);
+        font-size: 22px;
+        letter-spacing: -0.14px;
       }
-   }
-   & > .row-2{
-      @media all and ( max-width: 768px ){
-         & > div:nth-of-type(1){
-            flex: 0 1 4%;
-         }
-         & > div:nth-of-type(2){
-            flex: 0 1 43%;
-            height: 500px;
-         }
-         & > div:nth-of-type(3){
-            flex: 0 0 4%;
-         }
-         & > div:nth-of-type(4){
-            flex: 0 1 43%;
-            & p{
-            }
-         }
-         & > div:nth-of-type(5){
-            flex: 0 1 4%;
-         }
+      .bottom-profile p {
+        font-size: 17px;
+        letter-spacing: -0.09px;
       }
-      @media all and ( max-width: 568px ){
-         flex-flow: column nowrap;
-         margin-top: 0px;
-         & > div:nth-of-type(1), & > div:nth-of-type(3), & > div:nth-of-type(5){
-            display: none;
-         }
-         & > div:nth-of-type(2){
-            flex: auto;
-            height: auto;
-            margin: 40px  auto 0 auto;
-         }
-         & > div:nth-of-type(4){
-            flex: auto;
-            max-width: 90%;
-            flex: auto;
-            margin: 40px  auto 0 auto;
-         }
+    }
+    @media all and (max-width: 600px) {
+      width: 90%;
+      margin-right: 5%;
+      margin-left: 5%;
+      .letter-from {
+        transform: translateY(calc(-100% - 43px - 10px)) translateX(5px);
       }
-   }
+      .bottom-profile {
+        position: relative;
+        margin-top: 0;
+        z-index: 301;
+        transform: translateY(-100%);
+        padding: 0 45px 35px 45px;
+        & p {
+         font-size: 16px;
+       }
+      }
+    }
+    @media all and (max-width: 425px) {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom: 0;
+      .letter-from {
+        transform: translateY(calc(-100% - 43px - 10px)) translateX(15px);
+      }
+      .bottom-profile {
+        padding: 0 35px 35px 35px;
+      }
+    }
+  }
+
+  & .inner-letter-wrapper-2 {
+    @media all and (max-width: 425px) {
+      margin-top: 0;
+    }
+  }
 }
-#director-letter-section .main-wrapper{
-   @media all and ( max-width: 768px ){
-      & > div:nth-of-type(1){
-         flex: 0 1 4%;
-      }
-      & > div:nth-of-type(2){
-         flex: 0 1 43%;
-      }
-      & > div:nth-of-type(3){
-         flex: 0 0 4%;
-      }
-      & > div:nth-of-type(4){
-         flex: 0 1 43%;
-      }
-      & > div:nth-of-type(5){
-         flex: 0 1 4%;
-      }
-   }
-   @media all and ( max-width: 568px ){
-      flex-flow: column nowrap;
-      align-items: flex-start;
-       & > div:nth-of-type(1), & > div:nth-of-type(3), & > div:nth-of-type(5){
-         display: none;
-      }
-      & > div:nth-of-type(2){
-         flex: auto;
-         max-width: 90%;
-         margin-left: 5%;
-         & > div:nth-of-type(2){
-            margin-top: 40px;
-         }
-      }
-      & > div:nth-of-type(4){
-         flex: auto;
-         margin-top: 40px;
-         & > div:nth-of-type(2){
-            margin-left: 5%;
-            max-width: 90%;
-            margin-top: 40px;
-            & > p{
-               max-width: none;
-            }
-         }
-      }
-   }
+
+#director-letter-section, #dean-letter-section {
+  @media all and (max-width: 768px) {
+    padding: 80px 65px;
+    & h1 {
+      font-size: 50px;
+      line-height: 1.16;
+    }
+  }
+
+  @media all and (max-width: 600px) {
+    padding: 30px 40px 120px;
+    & img {
+      transform: translateY(calc(-100% - 5px)) translateX(5px);
+    }
+    & h1 {
+      font-size: 40px;
+      line-height: 1.08;
+      letter-spacing: -0.09px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(calc(-100% - 15px));
+    }
+  }
+
+  @media all and (max-width: 425px) {
+    padding: 30px 30px 150px;
+    & h1 {
+      transform: translateY(calc(-100% - 10px)) translateX(10px);
+    }
+  }
 }
+
 .section-header{
    @media all and ( max-width: 980px ){
       & > p:first-child{

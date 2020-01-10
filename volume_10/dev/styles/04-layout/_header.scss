@@ -99,7 +99,7 @@ header {
     //     cursor: pointer;
     //   }
     // }
-    & .bottom-nav{
+    & .bottom-nav {
       z-index: 510;
       position: absolute;
       bottom: 0px;
@@ -148,7 +148,7 @@ header {
     position: relative;
     text-align: center;
 
-    & > .school-name{
+    & > .school-name {
       font-family: $inconsolata-stack;
       font-size: $font-size * 1.625;
       font-weight: $bold;
@@ -159,7 +159,7 @@ header {
       text-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
       // margin-bottom: 20px;
     }
-    & > .edition-name{
+    & > .edition-name {
       font-family: $youngserif-stack;
       font-size: $font-size * 6.25;
       font-weight: $regular;
@@ -167,7 +167,7 @@ header {
       letter-spacing: -0.22px;
       color: $color-dark;
     }
-    & > .edition-info{
+    & > .edition-info {
       font-family: $inconsolata-stack;
       font-size: $font-size * 2;
       font-weight: $regular;
