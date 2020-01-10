@@ -199,16 +199,6 @@ header {
       margin: 25px auto 25px auto;
    }
 }
-.footer-nav {
-   & .footer-section:not(:last-of-type){
-       @media all and ( max-width : 500px ){
-         margin-bottom: 10px;
-      }
-   }
-   @media all and ( max-width : 500px ){
-      flex-flow: column nowrap;
-   }
-}
 
 #awards-recognitions .main-wrapper .grid-container {
    @media all and ( max-width : 1030px ){
@@ -1810,6 +1800,21 @@ p.header-credit{
    & > p:nth-of-type(3) {
       @media all and ( max-width: 768px ){
          max-width: 90%;
+      }
+   }
+}
+
+.footer-nav {
+   @media all and ( max-width : 800px ){
+      flex-direction: column;
+
+      & .footer-section:nth-child(2) {
+    		position: relative;
+    		left: 0;
+    		transform: none;
+    	}
+      .footer-section:not(:last-of-type){
+        margin-bottom: 10px;
       }
    }
 }
