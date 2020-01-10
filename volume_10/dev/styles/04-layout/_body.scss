@@ -174,13 +174,13 @@ section {
 
 	.main-wrapper {
 		display: flex;
-		flex-flow: row nowrap;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 80px 12.5%;
 
 		& > .label {
 			align-self: flex-start;
-			margin-top: 80px;
 			position: relative;
-			margin-left: 12.5%;
 
 			& > p {
 				position: relative;
@@ -200,9 +200,6 @@ section {
 		& > .awards-panel {
 			align-self: flex-end;
 			z-index: 520;
-			margin-left: 15%;
-			margin-top: 80px;
-			margin-bottom: 80px;
 			height: auto;
 
 			& .award-winners {

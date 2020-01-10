@@ -1466,22 +1466,56 @@ header {
 }
 
 #awards-section .main-wrapper {
-   @media all and (max-width: 670px ){
-      & > .label > p{
-         font-size: $font-size * 4.5;
+  @media all and (max-width: 1024px) {
+    flex-direction: column;
+    padding: 65px 75px;
+    & .label {
+      align-self: flex-start;
+      margin-bottom: 40px;
+    }
+    & .awards-panel {
+      align-self: flex-start;
+    }
+  }
+
+  @media all and (max-width: 768px) {
+    & .label {
+      & p {
+        font-size: 50px;
+        line-height: 1.16;
       }
-      & > .awards-panel{
-         margin-top: -40px;
+    }
+    & .awards-panel {
+      & .readmore {
+        margin-top: 0 !important;
       }
-   }
-   @media all and ( max-width: 800px ){
-      & > .awards-panel{
-         margin-right: 0px;
+    }
+  }
+
+  @media all and (max-width: 485px) {
+    padding: 50px 25px;
+    & .label {
+      & p {
+        font-size: 40px;
+        line-height: 1.08;
+        letter-spacing: -0.09px;
       }
-      & > .label {
-         margin-left: 5%;
+    }
+    & .awards-panel {
+      & p {
+        font-size: 20px !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.2px !important;
+        margin-top: 6px !important;
       }
-   }
+      & .readmore {
+        & a {
+          font-size: 16px !important;
+          letter-spacing: 0.81px !important;
+        }
+      }
+    }
+  }
 }
 p.header-credit{
    @media all and ( max-width: 375px ){
