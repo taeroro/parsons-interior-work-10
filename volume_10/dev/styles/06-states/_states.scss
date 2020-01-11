@@ -101,6 +101,11 @@ section {
 }
 
 #page-header {
+  @media all and (max-width: 1024px) {
+    &.awards-header {
+      padding: 110px 50px 0 50px;
+    }
+  }
   @media all and (max-width: 768px) {
     padding: 90px 50px 0 50px;
     & h1 {
@@ -113,8 +118,20 @@ section {
       height: 50px;
     }
   }
+  @media all and (max-width: 600px) {
+    &.awards-header {
+      padding: 80px 20px 0 20px;
+      .main-wrapper.page-header-wrapper {
+        flex-direction: column;
+        h1 {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
   @media all and (max-width: 425px) {
     padding: 80px 20px 0 20px;
+    margin-bottom: 20px;
     .main-wrapper.page-header-wrapper {
       flex-direction: column;
       & h1 {
@@ -126,6 +143,10 @@ section {
       .credit-icon {
         width: 103px;
         height: 45px;
+      }
+      .awards-icon {
+        width: 111px;
+        height: 49px;
       }
     }
   }
@@ -231,49 +252,107 @@ header {
    }
 }
 
-#awards-recognitions .main-wrapper .grid-container {
-   @media all and ( max-width : 1030px ){
-      margin: 0 5%;
-   }
+#awards-recognitions {
+  @media all and (max-width: 1024px) {
+    & .main-wrapper {
+      & .grid-container {
+        margin: 0 50px;
+        width: calc(100% - 100px);
+        max-width: none;
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    & .award {
+      .award-top-component-container {
+        .award-top-box-container {
+          padding: 30px !important;
+          .award-top-box-text-container {
+            margin-right: 25px !important;
+            h2 {
+              font-size: 26px !important;
+              line-height: 1.35 !important;
+              letter-spacing: -0.14px !important;
+            }
+          }
+        }
+        .award-top-box-icon-container {
+          img {
+            width: 29px !important;
+            height: 46px !important;
+          }
+          span {
+            font-size: 16px !important;
+            letter-spacing: 1.6px !important;
+          }
+        }
+        .award-top-box-icon-container.news {
+          img {
+            width: 36px !important;
+            height: 32px !important;
+          }
+        }
+      }
+      .award-bottom-component-container {
+        .recipient-text {
+          font-size: 16px !important;
+        }
+        .recipient-name-text {
+          font-size: 20px !important;
+          line-height: 1.5 !important;
+          letter-spacing: -0.11px !important;
+        }
+        .recipient-content-text {
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
+  @media all and (max-width: 700px) {
+    .award-top-component-container {
+      flex-direction: column-reverse !important;
+      height: auto !important;
+      .award-top-box-container {
+        width: calc(100% - 60px - 10px) !important;
+        height: 190px - 60px - 10px !important;
+      }
+      .award-image-container {
+        width: 100% !important;
+        height: 255px !important;
+      }
+    }
+  }
+  @media all and (max-width: 500px) {
+    .grid-container {
+      margin: 0 !important;
+      width: 100% !important;
+    }
+    .award-top-box-container {
+      width: calc(100% - 60px - 10px) !important;
+      height: 190px - 60px - 10px !important;
+    }
+    .award-bottom-component-container {
+      padding: 0 20px !important;
+    }
+  }
+  @media all and (max-width: 425px) {
+    .award {
+      margin-bottom: 90px !important;
+    }
+    .award .award-top-component-container .award-top-box-container {
+      padding: 25px !important;
+      min-height: 110px;
+      height: auto !important;
+      width: calc(100% - 50px - 10px) !important;
+      .award-top-box-text-container h2 {
+        font-size: 24px !important;
+        line-height: 1.33 !important;
+        letter-spacing: -0.13px !important;
+      }
+    }
+  }
 }
-#awards-recognitions .main-wrapper .grid-container {
-   @media all and ( max-width : 420px ){
-      margin: 0 auto;
-   }
-}
-#awards-recognitions .main-wrapper .grid-container .award .award-information{
-   & .award-credits {
-     @media all and ( max-width : 768px ){
-        padding: 0px 20px;
-      }
-      @media all and ( max-width : 420px ){
-         padding: 0px 10px;
-      }
-   }
-   & .project-information {
-     @media all and ( max-width : 768px ){
-         padding: 0px 20px;
-         top: -45px;
-      }
-   }
 
-}
-
-#awards-recognitions .main-wrapper .grid-container .award .award-information{
-   @media all and ( max-width : 768px ){
-      flex-flow: column nowrap;
-   }
-   & .award-credits{
-      @media all and ( max-width : 768px ){
-         flex: 0 1 auto;// Safari Bug Fix
-      }
-   }
-   & .project-information{
-      @media all and ( max-width : 768px ){
-         flex: 0 1 auto;// Safari bug Fix
-      }
-   }
-}
 #featured-faculty .main-wrapper .grid-container .row-1 {
    @media all and ( max-width : 765px ){
       flex-flow: column nowrap;

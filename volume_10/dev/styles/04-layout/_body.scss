@@ -2192,7 +2192,7 @@ section {
 					font-family: $inconsolata-stack;
 					font-size: 18px;
 					font-weight: $regular;
-					line-height: 1.44;
+					line-height: 1.5;
 					color: $color-grey-reading;
 				}
 			}
@@ -2230,6 +2230,9 @@ section {
 			}
 			a {
 				color: $color-sky-blue !important;
+				&:hover {
+					text-decoration: underline !important;
+				}
 			}
 			h2, a {
 				font-family: $youngserif-stack;

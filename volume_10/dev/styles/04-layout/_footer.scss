@@ -36,7 +36,9 @@ footer {
 			text-decoration: none;
 
 			&:visited {color: $color-sky-blue;}
-			&:hover {color: $color-dark;}
+			&:hover {
+				text-decoration: underline !important;
+			}
 		}
 	}
 
