@@ -94,24 +94,55 @@ body, html {
   }
 }
 
-#page-header h1{
-   @media all and ( max-width: 520px ){
-      font-size: 3 * $font-size;
-      margin-top: (2.75 * $font-size)/2*-1;
-   }
+section {
+  @media all and (max-width: 425px) {
+    margin-bottom: 50px;
+  }
 }
-#page-header.feature p:first-of-type{
-   @media all and ( max-width: 520px ){
-      margin-top: -40px;
-      max-width: 85%;
-   }
-   @media all and ( max-width: 768px ){
-      font-size: $font-size * 1.5;
-   }
-   @media all and ( max-width: 320px ){
-      font-size: $font-size * 1.25;
-   }
+
+#page-header {
+  @media all and (max-width: 768px) {
+    padding: 90px 50px 0 50px;
+    & h1 {
+      font-size: 50px;
+      line-height: 1.16;
+      letter-spacing: 0px;
+    }
+    .credit-icon {
+      width: 114px;
+      height: 50px;
+    }
+  }
+  @media all and (max-width: 425px) {
+    padding: 80px 20px 0 20px;
+    .main-wrapper.page-header-wrapper {
+      flex-direction: column;
+      & h1 {
+        font-size: 40px;
+        line-height: 1.08;
+        letter-spacing: -0.09px;
+        margin-bottom: 15px;
+      }
+      .credit-icon {
+        width: 103px;
+        height: 45px;
+      }
+    }
+  }
 }
+
+// #page-header.feature p:first-of-type{
+//    @media all and ( max-width: 520px ){
+//       margin-top: -40px;
+//       max-width: 85%;
+//    }
+//    @media all and ( max-width: 768px ){
+//       font-size: $font-size * 1.5;
+//    }
+//    @media all and ( max-width: 320px ){
+//       font-size: $font-size * 1.25;
+//    }
+// }
 
 header {
   @media all and (max-width: 768px) {
@@ -1804,8 +1835,65 @@ p.header-credit{
    }
 }
 
+#credits {
+  @media all and (max-width: 1024px) {
+    .main-wrapper .credit-container {
+      & .credit {
+    		flex-basis: 48%;
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    padding: 0 50px;
+    & .main-wrapper {
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    & .credit {
+      flex-basis: 100% !important;
+      margin-bottom: 32px !important;
+      & p {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+      }
+      & h2 {
+        font-size: 26px !important;
+        line-height: 1.35 !important;
+        letter-spacing: -0.14px !important;
+      }
+    }
+  }
+  @media all and (max-width: 600px) {
+    .main-wrapper .credit-container {
+      & .credit {
+    		flex-basis: 100%;
+        margin-left: 0;
+  			margin-right: 0;
+      }
+    }
+  }
+  @media all and (max-width: 425px) {
+    padding: 0 20px;
+    & .main-wrapper {
+      margin-top: 0;
+      margin-bottom: 50px;
+      .credit {
+        margin-bottom: 25px !important;
+        & h2 {
+          font-size: 24px !important;
+          line-height: 1.33 !important;
+          letter-spacing: -0.13px !important;
+        }
+      }
+      .credit:last-of-type {
+        display: none;
+      }
+    }
+  }
+}
+
 .footer-nav {
-   @media all and ( max-width : 800px ){
+   @media all and (max-width: 800px) {
       flex-direction: column;
 
       & .footer-section:nth-child(2) {
@@ -1813,7 +1901,7 @@ p.header-credit{
     		left: 0;
     		transform: none;
     	}
-      .footer-section:not(:last-of-type){
+      .footer-section:not(:last-of-type) {
         margin-bottom: 10px;
       }
    }
