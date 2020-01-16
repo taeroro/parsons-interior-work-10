@@ -105,6 +105,9 @@ section {
     &.awards-header {
       padding: 110px 50px 0 50px;
     }
+    &.faculty-directory-header {
+      padding: 110px 50px 0 50px;
+    }
   }
   @media all and (max-width: 768px) {
     padding: 90px 50px 0 50px;
@@ -130,6 +133,16 @@ section {
     }
   }
   @media all and (max-width: 425px) {
+    &.faculty-directory-header {
+      padding: 80px 20px 0 20px;
+      .main-wrapper.page-header-wrapper {
+        flex-direction: row;
+        align-items: flex-end;
+        img {
+          margin-bottom: 15px;
+        }
+      }
+    }
     padding: 80px 20px 0 20px;
     margin-bottom: 20px;
     .main-wrapper.page-header-wrapper {
@@ -1515,55 +1528,95 @@ header {
 }
 
 
-#faculty-directory{
-   & .division{
-      @media all and ( max-width : 630px ){
-         margin-right: 53px;
-         margin-top: 60px;
+#faculty-directory {
+  @media all and (max-width: 1024px) {
+    padding: 0 50px;
+  }
+  @media all and (max-width: 768px) {
+    margin-bottom: 100px;
+    & .division {
+      margin-bottom: 50px;
+      & .faculty {
+        margin-top: 30px;
+        & .faculty-title {
+          font-size: 26px;
+          line-height: 1.35;
+          letter-spacing: -0.14px;
+        }
+        & .faculty-email a, & .faculty-website a {
+          font-size: 16px;
+        }
+        & .faculty-degree, & .faculty-work {
+          font-size: 16px;
+          line-height: 1.5;
+        }
       }
-      & .faculty{
-         @media all and ( max-width : 630px ){
-            flex-basis: 100%;
-         }
+    }
+  }
+  @media all and (max-width: 650px) {
+    .main-wrapper.faculty-dir {
+      margin-top: 0 !important;
+    }
+    & .division {
+      & .faculty {
+        flex-basis: 100%;
       }
-   }
+    }
+  }
+  @media all and (max-width: 425px) {
+    padding: 0 20px;
+  }
 }
-#sticky-navigation{
-   @media all and ( max-width : 630px ){
-      width: 100%;
-      display: flex;
-      top: 45px;
-      height: 1px;
-      margin-bottom: 0px;
-   }
-   & .navigation{
-      @media all and ( max-width : 630px ){
-         align-items: flex-start;
-         height: 1px;
-         justify-content: flex-end;
-         transition: none;
-      }
-      &.sticked{
-         @media all and ( max-width : 630px ){
-            border:none;
-            background-color: transparent;
-         }
-      }
-      & > ul{
-         @media all and ( max-width : 630px ){
-            flex-flow: column nowrap;
-            align-items: center;
-            justify-content: flex-start;
-            width: 53px;
-         }
-         &>li{
-            @media all and ( max-width : 630px ){
-               height: 32px;
-            }
-         }
-      }
-   }
+
+#sticky-navigation {
+  @media all and (max-width: 1024px) {
+    margin-left: -50px;
+    width: 50px;
+  }
+  @media all and (max-width: 768px) {
+    top: 50px;
+  }
+  @media all and (max-width: 650px) {
+    display: none;
+  }
 }
+
+// #sticky-navigation{
+//    @media all and ( max-width : 630px ){
+//       width: 100%;
+//       display: flex;
+//       top: 45px;
+//       height: 1px;
+//       margin-bottom: 0px;
+//    }
+//    & .navigation{
+//       @media all and ( max-width : 630px ){
+//          align-items: flex-start;
+//          height: 1px;
+//          justify-content: flex-end;
+//          transition: none;
+//       }
+//       &.sticked{
+//          @media all and ( max-width : 630px ){
+//             border:none;
+//             background-color: transparent;
+//          }
+//       }
+//       & > ul{
+//          @media all and ( max-width : 630px ){
+//             flex-flow: column nowrap;
+//             align-items: center;
+//             justify-content: flex-start;
+//             width: 53px;
+//          }
+//          &>li{
+//             @media all and ( max-width : 630px ){
+//                height: 32px;
+//             }
+//          }
+//       }
+//    }
+// }
 
 #awards-section .main-wrapper {
   @media all and (max-width: 1024px) {
