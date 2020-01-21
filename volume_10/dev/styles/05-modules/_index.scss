@@ -17,7 +17,7 @@
    left: 0px;
    width: 100%;
    display: flex;
-   justify-content: center;
+   justify-content: flex-end;
    z-index: 680;
 }
 .slider-controls ul{
@@ -29,13 +29,13 @@
    width: 10px;
    height: 10px;
    margin: 15px 5px;
-   background-color: rgb(213, 232, 221);
+   background-color: #c9e0f1;
    border-radius: 50%;
    list-style: none;
    cursor: pointer;
 }
 .slider-controls ul li.current{
-   background-color: rgb(10,237,143);
+   background-color: #159dff;
 }
 .slider-frame{
    position: relative;

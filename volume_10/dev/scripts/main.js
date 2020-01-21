@@ -532,6 +532,7 @@ simpleCarousel.prototype.evaluateSlides = function(){
 
     var slideElements = this.sliderFrame.querySelectorAll('.slider-content > img');
     var sliderControlsListElement = this.carousel.querySelector('.slider-controls > ul');
+
     sliderControlsListElement.innerHTML = '';
     if( !slideElements ){
         console.warn('Slides couldn\'t be found! in Carousel #'+this.id);
