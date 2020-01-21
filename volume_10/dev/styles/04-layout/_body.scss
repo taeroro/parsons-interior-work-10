@@ -828,117 +828,120 @@ section {
 }
 
 
-#project-content .main-wrapper{
-	& .grid-container{
-		position: relative;
-		& > .row-1{
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: flex-start;
-			align-items: flex-start;
-			& > div:nth-of-type(1){
-				flex: 0 2 134px;
-			}
-			& > div:nth-of-type(2){
-				flex: 0 1 447px;
+#project-content {
+	margin-top: $project-content-margin-top;
 
-			}
-			& > div:nth-of-type(3){
-				flex: 0 2 203px;
-			}
-			& > div:nth-of-type(4){
-				flex: 0 1 426px;
-				margin-top: -115px;
-			}
-			& > div:nth-of-type(5){
-				flex: 0 2 134px;
-			}
-		}
-		& > .row-2{
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: flex-start;
-			margin-top: 60px;
-			& > div:nth-of-type(1){
-				flex: 0 1 671px;
-				margin-top: -14%;
-			}
-			& > div:nth-of-type(2){
-				flex: 0 1 673px;
-			}
-		}
-		& > .row-3{
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: flex-start;
-			margin-top: 60px;
-			& > div:nth-of-type(1){
-				flex: 0 1 581px;
-				& > .slider{
-					max-width: 470px;
+	p {
+		font-family: $inconsolata-stack;
+		font-size: $font-size;
+		font-weight: $regular;
+		line-height: 1.625;
+		color: $color-grey-reading;
+	}
+
+	& .main-wrapper {
+		& .grid-container {
+			position: relative;
+			& > .row-1{
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: flex-start;
+				align-items: flex-start;
+				& > div:nth-of-type(1){
+					flex: 0 2 134px;
+				}
+				& > div:nth-of-type(2){
+					flex: 0 1 447px;
+
+				}
+				& > div:nth-of-type(3){
+					flex: 0 2 203px;
+				}
+				& > div:nth-of-type(4){
+					flex: 0 1 426px;
+					// margin-top: -115px;
+				}
+				& > div:nth-of-type(5){
+					flex: 0 2 134px;
 				}
 			}
-			& > div:nth-of-type(2){
-				flex: 0 2 203px;
+			& > .row-2{
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: flex-start;
+				margin-top: 60px;
+				& > div:nth-of-type(1){
+					flex: 0 1 671px;
+					margin-top: -14%;
+				}
+				& > div:nth-of-type(2){
+					flex: 0 1 673px;
+				}
 			}
-			& > div:nth-of-type(3){
-				margin-top: -20%;
-				flex: 0 1 335px;
+			& > .row-3{
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: flex-start;
+				margin-top: 60px;
+				& > div:nth-of-type(1){
+					flex: 0 1 581px;
+					& > .slider{
+						max-width: 470px;
+					}
+				}
+				& > div:nth-of-type(2){
+					flex: 0 2 203px;
+				}
+				& > div:nth-of-type(3){
+					margin-top: -20%;
+					flex: 0 1 335px;
+				}
+				& > div:nth-of-type(4){
+					flex: 0 1 225px;
+				}
 			}
-			& > div:nth-of-type(4){
-				flex: 0 1 225px;
+			& > .row-4{
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: flex-end;
+				margin-top: 60px;
+				& > div:nth-of-type(1){
+					flex: 0 1 561px;
+				}
+				& > div:nth-of-type(2){
+					flex: 0 2 783px;
+					margin-top: -45%;
+				}
 			}
-		}
-		& > .row-4{
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: flex-end;
-			margin-top: 60px;
-			& > div:nth-of-type(1){
-				flex: 0 1 561px;
-			}
-			& > div:nth-of-type(2){
-				flex: 0 2 783px;
-				margin-top: -45%;
-			}
-		}
-		& > .row-5{
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: flex-start;
-			margin-top: 60px;
-			& > div:nth-of-type(1){
-				flex: 0 2 134px;
-			}
-			& > div:nth-of-type(2){
-				flex: 0 1 447px;
-				margin-top: -60px;
-				& > p{
-					max-width: 314px;
-					&:last-of-type{
-						line-height: 1.25;
-						margin-top: 30px;
-						font-family: $contax-sans-regular-stack;
-						& > span{
-							margin-right: 5px;
-							color: $color-turquoise-green;
-							line-height: 1.25;
-							font-family: $contax-sans-regular-stack;
+			& > .row-5{
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: flex-start;
+				margin-top: 60px;
+				& > div:nth-of-type(1){
+					flex: 0 2 134px;
+				}
+				& > div:nth-of-type(2){
+					flex: 0 1 447px;
+					margin-top: -60px;
+					& > p{
+						max-width: 314px;
+						&:last-of-type{
+							margin-top: 30px;
 						}
 					}
 				}
+				& > div:nth-of-type(3){
+					flex: 0 1 674px;
+					margin-top: -150px;
+				}
 			}
-			& > div:nth-of-type(3){
-				flex: 0 1 674px;
-				margin-top: -150px;
+			& > .row-6{
+				margin-top: 60px;
+				flex: 0 1 100%;
 			}
-		}
-		& > .row-6{
-			margin-top: 60px;
-			flex: 0 1 100%;
 		}
 	}
-
 }
 #featured-faculty{
 	overflow:hidden;
