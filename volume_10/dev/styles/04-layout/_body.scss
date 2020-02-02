@@ -301,6 +301,12 @@ section {
 		height: 62px;
 		object-fit: contain;
 	}
+
+	& .past-issues-icon {
+		width: 56px;
+		height: 66px;
+		object-fit: contain;
+	}
 }
 
 #page-header.feature{
@@ -462,7 +468,7 @@ section {
 	}
 }
 #projects-directory {
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 	padding: 0 135px;
 
 	.project-division:first-of-type {
@@ -534,6 +540,9 @@ section {
 							line-height: 1.25;
 							letter-spacing: -0.16px;
 							color: $color-sky-blue;
+						}
+						a:hover {
+							text-decoration: underline;
 						}
 					}
 					.project-name {
@@ -2130,53 +2139,50 @@ section {
 		}
 	}
 }
-#past-issues .main-wrapper{
-	& .grid-container{
-		position: relative;
-		display: flex;
-		flex-flow: row wrap;
-		margin: 0 8%;
-		justify-content: space-between;
-		& .issue{
-			flex-basis: 33.3%;
-			height: 418px;
-			margin: 40px auto 40px auto;
-			& .cover-image{
-				width: 210px;
-				height: 310px;
-				margin: 0 auto;
-				position: relative;
-				overflow: hidden;
-				& img{
-					object-fit: cover;
-					width: 100%;
-					height: 100%;
-				}
-			}
-			& .information{
-				width: 100%;
-				margin-top: 30px;
-				text-align: center;
-				color: $color-purpley-grey;
-				font-size: 1.2*$font-size;
-				line-height: 1.9;
-				font-family: $work-sans-stack;
-				font-weight: $regular;
-				cursor: default;
-			}
-			& .name{
-				width: 100%;
-				margin-top: 12px;
-				text-align: center;
-				color: $color-aqua-blue;
-				font-size: 2*$font-size;
-				line-height: 1;
-				font-family: $contax-sans-regular-stack;
-			}
 
+#past-issues {
+	margin-bottom: 100px;
+	padding: 0 135px;
+
+	.main-wrapper {
+		display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+	}
+
+	.issue {
+		flex-basis: 48%;
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 25px;
+
+		img {
+			height: 165px;
+			width: auto;
+		}
+
+		.issue-text-container {
+			margin-left: 20px;
+			h1 {
+				font-family: $youngserif-stack;
+				font-size: 28px;
+				line-height: 1.25;
+				letter-spacing: -0.16px;
+				color: $color-sky-blue
+			}
+			p {
+				margin-top: 5px;
+				font-family: $inconsolata-stack;
+				font-size: 18px;
+				font-weight: $bold;
+				line-height: 1.44;
+				letter-spacing: 0.5px;
+				color: $color-grey-reading;
+			}
 		}
 	}
 }
+
 #awards-recognitions .main-wrapper {
 	& .grid-container {
 		position: relative;

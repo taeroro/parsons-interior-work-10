@@ -111,6 +111,9 @@ section {
     &.design-work-header {
       padding: 110px 50px 0 50px;
     }
+    &.past-issues-header {
+      padding: 110px 50px 0 50px;
+    }
   }
   @media all and (max-width: 768px) {
     padding: 90px 50px 0 50px;
@@ -123,8 +126,10 @@ section {
       width: 114px;
       height: 50px;
     }
-    .design-icon {
-
+    &.past-issues-header {
+      h1 {
+        white-space: pre-line !important;
+      }
     }
   }
   @media all and (max-width: 600px) {
@@ -162,6 +167,18 @@ section {
         img {
           width: 56px;
           height: 50px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    &.past-issues-header {
+      padding: 80px 20px 0 20px;
+      .main-wrapper.page-header-wrapper {
+        flex-direction: row;
+        align-items: flex-end;
+        img {
+          width: 45px;
+          height: 53px;
           margin-bottom: 15px;
         }
       }
@@ -283,15 +300,7 @@ header {
    }
 }
 
-#past-issues .main-wrapper .grid-container .issue {
-   @media all and ( max-width : 960px ){
-      flex-basis: 50%;
-   }
-   @media all and ( max-width : 580px ){
-      flex-basis: 100%;
-      margin: 25px auto 25px auto;
-   }
-}
+
 
 #awards-recognitions {
   @media all and (max-width: 1024px) {
@@ -2161,6 +2170,58 @@ p.header-credit{
       font-size: 16px !important;
       line-height: 1.19 !important;
       letter-spacing: 0.04px !important;
+    }
+  }
+}
+
+#past-issues {
+  @media all and (max-width: 1024px) {
+    padding: 0 50px;
+  }
+
+  @media all and (max-width: 880px) {
+    margin-bottom: 50px !important;
+
+    .issue:first-of-type {
+      img {
+        height: 100px !important;
+      }
+    }
+    .issue-text-container {
+      margin-left: 15px !important;
+      h1 {
+        font-size: 24px !important;
+        line-height: 1.21 !important;
+        letter-spacing: -0.13px !important;
+      }
+    }
+  }
+
+  @media all and (max-width: 620px) {
+    .issue {
+      flex-basis: 100%;
+      img {
+        height: 120px !important;
+      }
+    }
+  }
+
+  @media all and (max-width: 425px) {
+    padding: 0 20px;
+    margin-bottom: 30px !important;
+
+    .issue-text-container {
+      margin-left: 15px !important;
+      h1 {
+        font-size: 22px !important;
+        line-height: 1.27 !important;;
+        letter-spacing: -0.12px !important;;
+      }
+      p {
+        font-size: 16px !important;
+        line-height: 1.13 !important;
+        letter-spacing: 0.24px !important;
+      }
     }
   }
 }
