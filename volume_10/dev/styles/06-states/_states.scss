@@ -108,6 +108,9 @@ section {
     &.faculty-directory-header {
       padding: 110px 50px 0 50px;
     }
+    &.design-work-header {
+      padding: 110px 50px 0 50px;
+    }
   }
   @media all and (max-width: 768px) {
     padding: 90px 50px 0 50px;
@@ -120,6 +123,9 @@ section {
       width: 114px;
       height: 50px;
     }
+    .design-icon {
+
+    }
   }
   @media all and (max-width: 600px) {
     &.awards-header {
@@ -129,6 +135,11 @@ section {
         h1 {
           margin-bottom: 20px;
         }
+      }
+    }
+    &.design-work-header {
+      h1 {
+        white-space: pre-line !important;
       }
     }
   }
@@ -143,6 +154,19 @@ section {
         }
       }
     }
+    &.design-work-header {
+      padding: 80px 20px 0 20px;
+      .main-wrapper.page-header-wrapper {
+        flex-direction: row;
+        align-items: flex-end;
+        img {
+          width: 56px;
+          height: 50px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
     padding: 80px 20px 0 20px;
     margin-bottom: 20px;
     .main-wrapper.page-header-wrapper {
@@ -2041,4 +2065,102 @@ p.header-credit{
         margin-bottom: 10px;
       }
    }
+}
+
+
+#projects-directory {
+  @media all and (max-width: 1024px) {
+    padding: 0 50px;
+  }
+
+  @media all and (max-width: 768px) {
+    margin-bottom: 80px;
+
+    .project {
+      margin-top: 20px !important;
+    }
+
+    .project-division-icon {
+      width: 40px !important;
+      height: 40px !important;
+    }
+    .project-division-title {
+      margin-left: 15px !important;
+      margin-right: 15px !important;
+      h1 {
+        font-size: 24px !important;
+        line-height: 1.33 !important;
+        letter-spacing: -0.15px !important;
+      }
+    }
+
+    .project-image {
+      img {
+        height: 110px !important;
+      }
+    }
+    .project-text-block {
+      margin-left: 15px !important;
+    }
+    .project-artist {
+      a {
+        font-size: 24px !important;
+        line-height: 1.21 !important;
+        letter-spacing: -0.13px !important;
+      }
+    }
+    .project-name {
+      font-size: 18px !important;
+      letter-spacing: 0.5px !important;
+      line-height: 1 !important;
+    }
+  }
+
+  @media all and (max-width: 650px) {
+    .project {
+      flex-basis: 100% !important;
+    }
+  }
+
+  @media all and (max-width: 425px) {
+    padding: 0 20px;
+    margin-bottom: 60px;
+
+    .project-division {
+      margin-top: 30px;
+    }
+
+    .project-division-icon {
+      width: 25px !important;
+      height: 25px !important;
+    }
+
+    .project-division-title {
+      margin-left: 10px !important;
+      margin-right: 10px !important;
+
+      h1 {
+        font-size: 18px !important;
+        letter-spacing: -0.11px !important;
+      }
+    }
+
+    .project-image {
+      img {
+        height: 78px !important;
+      }
+    }
+    .project-artist {
+      a {
+        font-size: 22px !important;
+        line-height: 1.27 !important;
+        letter-spacing: -0.12px !important;
+      }
+    }
+    .project-name {
+      font-size: 16px !important;
+      line-height: 1.19 !important;
+      letter-spacing: 0.04px !important;
+    }
+  }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Symbol1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="W10-DesignWork-1366" transform="translate(-134.000000, -623.000000)" stroke="#159DFF">
+            <g id="Group-Copy" transform="translate(134.000000, 623.000000)">
+                <g id="Divider">
+                    <g id="Icon2">
+                        <g id="Symbol" fill="#C9E0F1">
+                            <rect id="Rectangle" stroke-width="5" x="2.5" y="2.5" width="45" height="45"></rect>
+                        </g>
+                        <g id="Group" transform="translate(3.000000, 3.000000)">
+                            <line x1="0.5" y1="43.5" x2="23.5" y2="0.5" id="Line-2" stroke-width="5"></line>
+                            <line x1="19.75" y1="43.5" x2="42.5" y2="0.5" id="Line-2-Copy-3" stroke-width="5"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

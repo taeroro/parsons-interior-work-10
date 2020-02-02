@@ -295,6 +295,12 @@ section {
 		height: 62px;
 		object-fit: contain;
 	}
+
+	& .design-icon {
+		width: 70px;
+		height: 62px;
+		object-fit: contain;
+	}
 }
 
 #page-header.feature{
@@ -456,7 +462,94 @@ section {
 	}
 }
 #projects-directory {
-	margin-bottom: 40px;
+	margin-bottom: 150px;
+	padding: 0 135px;
+
+	.project-division:first-of-type {
+		margin-top: 0 !important;
+	}
+
+	.project-division {
+		margin-top: 50px;
+
+		.project-division-top-wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			overflow: hidden;
+
+			.project-division-icon {
+				width: 50px;
+				height: 50px;
+				object-fit: contain;
+			}
+
+			.project-division-title {
+				margin-left: 25px;
+				margin-right: 25px;
+				h1 {
+					white-space: nowrap;
+					font-family: $inconsolata-stack;
+					font-size: 26px;
+					font-weight: $bold;
+					line-height: 1.23;
+					letter-spacing: -0.16px;
+					color: $color-sky-blue;
+				}
+			}
+
+			.project-division-line {
+				width: 100%;
+				height: 5px;
+				background-color: $color-sky-blue;
+			}
+		}
+
+		.project-division-content {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+
+			.project {
+				flex-basis: 49%;
+	    	margin-top: 55px;
+				display: flex;
+				flex-direction: row;
+
+				.project-image {
+					img {
+						height: 150px;
+						width: auto;
+					}
+				}
+				.project-text-block {
+					display: flex;
+					flex-direction: column;
+					margin-left: 20px;
+
+					.project-artist {
+						a {
+							font-family: $youngserif-stack;
+							font-size: 28px;
+							line-height: 1.25;
+							letter-spacing: -0.16px;
+							color: $color-sky-blue;
+						}
+					}
+					.project-name {
+						margin-top: 5px;
+						font-family: $inconsolata-stack;
+						font-size: 18px;
+						font-weight: $bold;
+						line-height: 1.44;
+						letter-spacing: 0.5px;
+						color: $color-grey-reading;
+					}
+
+				}
+			}
+		}
+	}
 }
 
 #faculty-directory {
