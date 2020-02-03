@@ -1368,7 +1368,8 @@ section {
 				}
 				& > div:nth-of-type(3){
 					flex:0 1 calc(100% - 560px);
-					margin-top: -400px;
+					margin-top: -380px;
+    			max-height: 285px;
 					& .slider{
 						margin: 0 auto;
 						max-width: 537px;
@@ -1377,13 +1378,16 @@ section {
 				& > div:nth-of-type(4){
 					flex:0 1 calc(100% - 565px);
 					margin-top: -30px;
+					max-height: 434px;
 					& .slider{
 						max-width: 694px;
 					}
 				}
 				& > div:nth-of-type(5){
 					margin-top: 90px;
-					margin-left: 6px;
+					// margin-left: 6px;
+					margin-left: auto;
+					margin-right: auto;
 					& p{
 						max-width: 425px;
 					}
