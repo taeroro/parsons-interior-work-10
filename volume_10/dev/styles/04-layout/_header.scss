@@ -398,7 +398,11 @@ nav {
   height: 100vh;
   z-index: 525;
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
-  background-color: $color-white;
+  // background-color: $color-white;
+
+  background-image: linear-gradient(to right, $color-white 50%, $color-sky-blue 50%);
+  background-size: 200% 100%;
+  background-position: 0 0;
 
   &.open {
     display: block;
@@ -409,7 +413,8 @@ nav {
   }
 
   &.submenu-open {
-    background-color: $color-sky-blue;
+    // background-color: $color-sky-blue;
+    background-position: -100% 0;
   }
 }
 
