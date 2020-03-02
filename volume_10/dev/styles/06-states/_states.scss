@@ -224,13 +224,13 @@ section {
 // }
 
 header {
-  @media all and (max-width: 768px) {
-    height: 600px;
-  }
-
-   @media all and (max-width: 500px) {
-     height: 400px;
-   }
+  // @media all and (max-width: 768px) {
+  //   height: 600px;
+  // }
+  //
+  //  @media all and (max-width: 500px) {
+  //    height: 400px;
+  //  }
    & .header-wrapper {
       & > .header-container {
          @media all and (max-width: 1100px) {

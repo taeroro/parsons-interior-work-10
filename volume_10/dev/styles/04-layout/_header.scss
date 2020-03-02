@@ -12,7 +12,8 @@ header {
     position: relative;
     z-index: 500;
     margin: 0px auto;
-    height: $header-height-full;
+    // height: $header-height-full;
+    height: calc(100vh - 40px);
     &.fixed-height-750 {
       height: $header-height-fixed-750;
     }
