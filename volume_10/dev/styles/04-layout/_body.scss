@@ -696,19 +696,9 @@ section {
 				right: 0%;
 				transform: translateY(-$project-card-padding) translateX(-$top-right-box-border-width);
 
-				width: $top-right-box-width;
-				height: $top-right-box-width;
-				border: solid $top-right-box-border-width $color-sky-blue;
-				background-color: #c9e0f1;
-
-				& .diagonal-line {
-					position: absolute;
-					top: 50%;
-					transform: translateY(-50%) rotate(45deg) scale(1.42);
-
+				img {
 					width: $top-right-box-width;
-					height: $top-right-box-border-width / 1.42;
-					background-color: $color-sky-blue;
+					height: $top-right-box-width;
 				}
 			}
 		}
@@ -814,19 +804,9 @@ section {
 				right: 0%;
 				transform: translateY(-$project-card-padding) translateX(-$top-right-box-border-width);
 
-				width: $top-right-box-width;
-				height: $top-right-box-width;
-				border: solid $top-right-box-border-width $color-sky-blue;
-				background-color: #c9e0f1;
-
-				& .diagonal-line {
-					position: absolute;
-					top: 50%;
-					transform: translateY(-50%) rotate(45deg) scale(1.42);
-
+				img {
 					width: $top-right-box-width;
-					height: $top-right-box-border-width / 1.42;
-					background-color: $color-sky-blue;
+					height: $top-right-box-width;
 				}
 			}
 		}

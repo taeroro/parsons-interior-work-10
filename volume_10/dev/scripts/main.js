@@ -209,7 +209,7 @@ window.onload = function () {
         sliders.push( new simpleCarousel(i,slidersElements[i],options) );
         sliders[sliders.length-1].initialize();
     }
-    var navControls = document.querySelectorAll('.nav-controls');
+    var navControls = document.querySelectorAll('.menu-button');
     for( var it = 0 ; it < navControls.length ; it++){
         if( navControls[it].dataset.direction ){
             navControls[it].addEventListener('click', paginationArray.handler, false);
