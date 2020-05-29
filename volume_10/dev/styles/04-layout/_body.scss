@@ -1149,7 +1149,6 @@ section {
 				color: $color-dark;
 				text-transform: uppercase;
 
-				// transform: translateX(50%) rotate(-90deg) translateY(-50%) translateX(-10%);
 				transform: translateX(-50%) rotate(-90deg) translateY(50px) translateX(-10%);
 			}
 		}
@@ -1633,6 +1632,7 @@ section {
 
 			& img {
 				width: 63%;
+				height: 100%;
 			}
 
 			& .text-container {
