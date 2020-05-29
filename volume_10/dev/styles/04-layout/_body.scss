@@ -1476,6 +1476,10 @@ section {
 		& .sec-2 {
 			margin-top: 45px;
 
+			& p {
+				display: none;
+			}
+
 			& img {
 				width: 75%;
 			}
@@ -1536,6 +1540,10 @@ section {
 		& .sec-2 {
 			margin-top: 40px;
 
+			& p {
+				display: none;
+			}
+
 			& img {
 				width: 100%;
 			}
@@ -1595,6 +1603,10 @@ section {
 
 		& .sec-2, .sec-3 {
 			margin-top: 40px;
+
+			& p {
+				display: none;
+			}
 
 			& img {
 				width: 100%;
