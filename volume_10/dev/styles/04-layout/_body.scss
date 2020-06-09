@@ -318,6 +318,10 @@ section {
 .academic-text-header {
 	margin-bottom: 0 !important;
 
+	max-width: 1366px;
+	padding: 110px 0 0 0 !important;
+	margin: 0 auto;
+
 	.academic-text-author {
 		margin-top: 20px;
 
@@ -2260,6 +2264,10 @@ section {
 
 				p {
 					margin: 40px 0;
+				}
+
+				.hidden-text-mobile, .hidden-img-mobile {
+					display: none;
 				}
 			}
 
