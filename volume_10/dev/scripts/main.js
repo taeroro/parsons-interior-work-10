@@ -4,7 +4,6 @@
 /*global window, document */
 
 
-
 /** START
  * GLOBAL VARIABLES
  */
@@ -12,153 +11,66 @@
 var useGrid = false;
 //var body = null;
 var sliders = new Array();
+var rootUrl = window.location.origin;
+
+// get all design work projects
+var designWorkPosts = [];
+var aLinks = Array.prototype.slice.call(document.getElementsByClassName('sub-item-container'));
+aLinks.forEach(function(item) {
+    designWorkPosts.push({
+        pageName: item.querySelector('p').innerHTML,
+        url: item.href
+    });
+});
+
 var paginationArray = [
     {
         pageName: 'Introduction',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/'
-    },
-    {
-        pageName: 'Featured Faculty',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/featured-faculty/'
+        url: rootUrl + '/'
     },
     {
         pageName: 'Design Works',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/projects-directory/'
-    },
-    {
-        pageName: 'Embrace Refugee Center',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/embrace-refugee-center/'
-    },
-    {
-        pageName: 'Chaos to Clarity',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/chaos-to-clarity/'
-    },
-    {
-        pageName: 'New York is a Friendly Town',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/friendly-new-york/'
-    },
-    {
-        pageName: 'In the Middle',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/in-the-middle/'
-    },
-    {
-        pageName: 'Learning to Live Refugee Again Center',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/learning-to-live-again-refugee-center/'
-    },
-    {
-        pageName: 'The Quadrant',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/welcome-center/'
-    },
-    {
-        pageName: 'Pier in the Pier',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/pier-in-the-pier/'
-    },
-    {
-        pageName: 'The Urban Theater',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/the-urban-theater/'
-    },
-    {
-        pageName: 'The Aux House',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/the-aux-house/'
-    },
-    {
-        pageName: 'Nara',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/nara/'
-    },
-    {
-        pageName: 'King\'s Arms',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/kings-arms/'
-    },
-    {
-        pageName: 'The Misselthwaite Hotel',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/the-misselthwaite-hotel/'
-    },
-    {
-        pageName: 'Hotel One Madison',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/hotel-one-madison/'
-    },
-    {
-        pageName: 'Hotel Catalogue 19',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/hotel-catalogue-19/'
-    },
-    {
-        pageName: 'InterMIX Hotel',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/intermix-hotel/'
-    },
-    {
-        pageName: 'The Portal',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/the-portal/'
-    },
-    {
-        pageName: 'Detroit Community Kitchen',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/detroit-community-kitchen/'
-    },
-    {
-        pageName: 'Jenga!',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/jenga-2/'
-    },
-    {
-        pageName: 'Refracted Passage',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/refracted-passage-2/'
-    },
-    {
-        pageName: 'Nola Food Hall',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/nola-food-hall/'
-    },
-    {
-        pageName: 'Craft Restaurant and Community Kitchen',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/craft-restaurant-and-community-kitchen/'
-    },
-    {
-        pageName: 'RIBBON FARM',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/ribbon-farm/'
-    },
-    {
-        pageName: 'Rain Stop',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/rain-stop/'
-    },
-    {
-        pageName: 'Live House/Work House',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/live-work-house-3/'
-    },
-    {
-        pageName: 'Cycling Club',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/cycling-club/'
-    },
-    {
-        pageName: 'Cafe Moto',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/cafe-moto/'
-    },
-    {
-        pageName: 'Craved Sneaker Shop',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/project/carved-sneaker-shop/'
+        url: rootUrl + '/projects-directory/'
     },
     {
         pageName: 'Featured Alumna',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/featured-alumna/'
+        url: rootUrl + '/featured-alumna/'
+    },
+    {
+        pageName: 'Featured Faculty',
+        url: rootUrl + '/featured-faculty/'
     },
     {
         pageName: 'Academic Text',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/ornament-and-the-mind/'
+        url: rootUrl + '/academic/'
     },
     {
         pageName: 'Faculty Directory',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/faculty-directory/'
+        url: rootUrl + '/faculty-directory/'
     },
     {
         pageName: 'Past Issues of Work',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/past-issues/'
+        url: rootUrl + '/past-issues/'
     },
     {
         pageName: 'Awards & Recognitions',
-        url: 'http://wpdeve.parsons.edu/parsonsinteriorwork/awards-recognitions/'
+        url: rootUrl + '/awards-recognitions/'
+    },
+    {
+        pageName: 'Credits',
+        url: rootUrl + '/credits/'
     }
 ];
+
+paginationArray.splice.apply(paginationArray, [2, 0].concat(designWorkPosts));
+
 paginationArray.handler = function(evnt){
     var currentPage = window.location.href;
-    var currentIndex= -1;
+    var currentIndex = -1;
     var nextIndex;
     for( var i =0 ; i < paginationArray.length ; i++ ){
+        console.log(paginationArray[i].url);
+
         if( currentPage === paginationArray[i].url ){
             currentIndex = i;
             break;
@@ -177,6 +89,7 @@ paginationArray.handler = function(evnt){
     }else if( nextIndex >= paginationArray.length ){
         nextIndex = 0;
     }
+
     window.location.href = paginationArray[nextIndex].url;
 };
 
@@ -212,7 +125,7 @@ window.onload = function () {
     var navControls = document.querySelectorAll('.menu-button');
     for( var it = 0 ; it < navControls.length ; it++){
         if( navControls[it].dataset.direction ){
-            navControls[it].addEventListener('click', paginationArray.handler, false);
+            navControls[it].addEventListener('click', paginationArray.handler);
         }
     }
     var facultyNavigation = document.querySelector('#sticky-navigation');
